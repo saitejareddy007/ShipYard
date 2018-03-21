@@ -3,7 +3,16 @@ $(document).ready(function(){
         $(".topBarWords").removeClass("wordactive");
         $(this).addClass("wordactive");
         $(".Categories").removeClass("active");
-        $("#"+this.attr("id")).addClass("active");
+
+        if($(this).attr('id')=='w'){
+            $("#Work_Men").addClass('active');
+        }
+        else if($(this).attr('id')=='f'){
+            $("#Facilities").addClass('active');
+        }
+        else if($(this).attr('id')=='r'){
+
+        }
     });
 
     

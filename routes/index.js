@@ -5,7 +5,7 @@ var db      = require('../repo/db')
 /* GET home page. */
 router.get('/', function(req, res, next) {
     db.dbOfWorkMen.find({},function (err,workmen) {
-        db.dbOfFacilities.find({},function (ferr,facility) {
+        db.dbOfFacilities.find({},function (err,facility) {
             if(err) throw err;
             res.render('index', {workmen:workmen,facility:facility});
         })

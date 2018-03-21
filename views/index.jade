@@ -1,5 +1,27 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(class="col-sm-2" id="sidebar")
+  div(id="contents" class="col-sm-10")
+      h1 Faclities
+      div(class="scrollmenu" id="facility" style="background:white;")
+          -for(var c=0;c<= facility.length-1;c++)
+              div(id="contentf" style="")
+                img(style="width:100%" src="/images/img.jpg")
+                h4  #{facility[c].FacilityName}
+                h4  #{facility[c].Quantity}
+                h4  #{facility[c].Date.getDate()}-#{facility[c].Date.getMonth()}-#{facility[c].Date.getFullYear()}
+      button(id="btnsr1" onclick="fun") >
+      button(id="btnsl1" onclick="fun") <
+      h1 Work Men
+      div(class="scrollmenu" id="workmen" style="background:white;")
+            -for(var c=0;c<= workmen.length-1;c++)
+                div(id="contentw" style="")
+                    img(style="width:100%" src="/images/img.jpg")
+                    h4  #{workmen[c].workmenType}
+                    h4  #{workmen[c].Quantity}
+                    h4  #{workmen[c].Date.getDate()}-#{workmen[c].Date.getMonth()}-#{workmen[c].Date.getFullYear()}
+      button(id="btnsr2" onclick="fun") >
+      button(id="btnsl2" onclick="fun") <
+
+

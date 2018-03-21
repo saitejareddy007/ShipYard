@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    div( id="topBar" style="")
+        span(id="r" class="topBarWords wordactive" style="margin-left:15%;") Resources
+        span(id="f" class="topBarWords" ) Facilities
+        span(id="w" class="topBarWords" ) Workmen
+
+    div(class="col-sm-3")
+    div(id= "main" class="col-sm-6")
+        div(id = "Facilities" class="Categories active col-sm-6")
+            form(method="post" action="/addFacilities")
+                input(type="text", name="facilityName", placeholder="Facility Name")
+                br
+                label Quantity
+                select(name="quantity")
+                    -for (var i=1;i<=10;i++)
+                        option(value="#{i}") #{i}
+                br
+                label payback period
+                input(type="date" name="fdate")
+                input(type="submit")
+            button(id="btn1") Go back
+
+        div(id = "Work_Men" class="Categories col-sm-6")
+            form(method="post" action="/addWork_Men")
+                select(name="WorkMenType", placeholder="Work Men")
+                    option(value="electrician") Electrician
+                    option(value="welders_and_sholders") Welders and Sholders
+                    option(value="rigger") Rigger
+                br
+                label Quantity
+                select(name="WorkMenQuantity")
+                    -for (var i=1;i<=500;i++)
+                        option(value="#{i}") #{i}
+                br
+                label payback period
+                input(type="date", name="Wdate")
+                input(type="submit")
+            button(id="btn2") Go back
+
+    div(class="col-sm-3")

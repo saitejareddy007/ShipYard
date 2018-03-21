@@ -2,6 +2,42 @@ doctype html
 html
   head
     title= title
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="/javascripts/styleScript.js")
+    link(href="/stylesheets/bootstrap.min.css" rel="stylesheet")
+    link(href="/stylesheets/custom.css" rel="stylesheet")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+
+        nav.navbar.navbar-inverse.navbar-static-top(role='navigation' style="background:#4b5320; margin-bottom:0px;")
+            .container
+              // Logo and responsive toggle
+              #navbar.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                  li.active
+                    a(href='#') Home
+
+                  li
+                    a(href='#') About
+
+                  li
+                    a(href='#') Products
+
+                  li
+                    a(href="/render") Render
+
+                // Search
+                form.navbar-form.navbar-right(role='search')
+                  .form-group
+                    input.form-control(type='text')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;
+                  button.btn.btn-default(type='submit')
+                    span.glyphicon.glyphicon-search
+                    |  Search
+              .navbar-collapse
+             .container
     block content
+script(src="/javascripts/js/jquery-1.11.3.min.js")
+script(src="/javascripts/js/bootstrap.min.js")
+script(src="/javascripts/js/ie10-viewport-bug-workaround.js")
+script(src="/javascripts/js/holder.min.js")

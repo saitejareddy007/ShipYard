@@ -1,5 +1,5 @@
-Common Portal for resource sharing in Defense Shipyards | Smart India Hackathon
-- April 2018
+Common Portal for resource sharing in Defense Shipyards | Smart India Hackathon,
+- April 2018,
 An ecommerce type website for Shipyard PSU’s, to share inventory and personnel in other shipyards, instead of
 buying new inventory or getting new contractors.
 Role: Product Designing and front end development
